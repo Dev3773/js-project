@@ -1,1 +1,1 @@
-# My first js-project !!!
+# My Java Script project !!!
