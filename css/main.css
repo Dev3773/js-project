@@ -66,32 +66,58 @@ img {
   }
 }
 
-.container {
-  max-width: 600px;
-  height: 400px;
-  background-color: rgb(44, 237, 237);
-  margin-top: 20px;
-  padding: 0;
-  border: 3px solid red;
-  overflow: scroll;
+fieldset {
+  border: 2px solid blue;
 }
 
-.box {
-  position: sticky;
-  top: -1px;
-  max-width: 100%;
-  height: 70px;
-  background-color: rgb(50, 141, 17);
-  border: 2px solid blue;
+label {
+  display: block;
+  margin-top: 20px;
+}
+
+.legend {
+  font-size: 18px;
+  margin-left: 100px;
+  color: rgb(158, 58, 113);
+}
+
+.check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 20px;
-  color: white;
+}
+
+.check__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.check__icon {
+  display: none;
+  width: 20px;
+  height: 20px;
+  margin-left: 7px;
+  border-radius: 5px;
+}
+
+.check__checken {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-left: 7px;
+}
+
+.check__input:checked + .check__icon {
+  display: block;
+}
+
+.check__input:checked ~ .check__checken {
+  display: none;
+}
+
+.check__input:not(:checked) ~ .check__checken {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
