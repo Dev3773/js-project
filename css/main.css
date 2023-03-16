@@ -12,6 +12,19 @@
   overflow: hidden;
 }
 
+.button-error, .button-sucsses, .button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin: 20px;
+  border: 5px;
+  cursor: pointer;
+}
+
 body {
   background-color: rgb(246, 209, 165);
 }
@@ -66,58 +79,15 @@ img {
   }
 }
 
-fieldset {
-  border: 2px solid blue;
-}
-
-label {
-  display: block;
-  margin-top: 20px;
-}
-
-.legend {
-  font-size: 18px;
-  margin-left: 100px;
-  color: rgb(158, 58, 113);
-}
-
-.check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.check__input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-.check__icon {
-  display: none;
-  width: 20px;
-  height: 20px;
-  margin-left: 7px;
+.button-sucsses {
+  width: 250px;
+  border: 4px solid black;
   border-radius: 5px;
+  background-color: #5a1321;
 }
 
-.check__checken {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin-left: 7px;
-}
-
-.check__input:checked + .check__icon {
-  display: block;
-}
-
-.check__input:checked ~ .check__checken {
-  display: none;
-}
-
-.check__input:not(:checked) ~ .check__checken {
-  display: block;
+.button-error {
+  background-color: tomato;
+  border-radius: 10px;
+  background-color: #d98328;
 }/*# sourceMappingURL=main.css.map */

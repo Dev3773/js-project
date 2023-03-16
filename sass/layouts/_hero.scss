@@ -1,58 +1,31 @@
-
-fieldset {
-  border: 2px solid blue;
+.button {
+  @extend %button;
 }
 
-label {
-display: block;
-margin-top: 20px;
+.button-sucsses {
+  @extend %button;
+  width: 250px;
+  border: $border;
+
+  @include bord(5px);
+
+  background-color: map-get($colors, 'secondary')
 }
 
-.legend {
-  font-size: 18px;
-  margin-left: 100px;
-  color: rgb(158, 58, 113);
+.button-error {
+  @extend %button;
+  background-color: tomato;
+
+  @include bord(10px);
+
+  background-color: getColor('accent');
 }
 
-.check {
-  display: flex;
-}
 
-.check__input {
-appearance: none; 
-}
 
-.check__icon {
-  display: none;
-  width: 20px;
-  height: 20px;
-  margin-left: 7px;
-  border-radius: 5px;
-}
 
-.check__checken{
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin-left: 7px;
-} 
 
-.check__input:checked + .check__icon {
-  display: block;
-}
 
-.check__input:checked ~ .check__checken {
-  display: none;
-}
 
-.check__input:not(:checked) ~ .check__checken {
-  display: block;
-}
-
-// .s {
-//   background-image: url(../../images/i.svg);
-// }
 
 
