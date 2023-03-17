@@ -1,31 +1,22 @@
-.button {
-  @extend %button;
+.contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
 }
 
-.button-sucsses {
-  @extend %button;
-  width: 250px;
-  border: $border;
-
-  @include bord(5px);
-
-  background-color: map-get($colors, 'secondary')
-}
-
-.button-error {
-  @extend %button;
+.element {
+  height: 120px;
+  width: 350px;
   background-color: tomato;
-
-  @include bord(10px);
-
-  background-color: getColor('accent');
+  border-radius: 5px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
-
-
-
-
-
-
+.box {
+  font-size: 20px;
+}
