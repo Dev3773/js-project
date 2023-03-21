@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper ">
+    <div class="swiper-wrapper sliders">
+      <div class="swiper-slide slider-1 slider">Slide 1</div>
+      <div class="swiper-slide slider-2 slider">Slide 2</div>
+      <div class="swiper-slide slider-3 slider">Slide 3</div>
+      <div class="swiper-slide slider-4 slider">Slide 4</div>
+      <div class="swiper-slide slider-5 slider">Slide 5</div>
+      <div class="swiper-slide slider-6 slider">Slide 6</div>
+      <div class="swiper-slide slider-7 slider">Slide 7</div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <div class="swiper-pagination"></div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,  
+      
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+</body>
+
+</html>
