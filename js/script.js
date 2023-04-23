@@ -1,28 +1,23 @@
-class User {
+// console.dir(window.document);
+// console.dir(document);
 
-  constructor(name) {
-    this.name = name;
-  }
-}
+const menuEl = document.querySelector(".menu__item");
+// console.log(menuEl);
 
-const mango = new User("Mango");
-console.log(mango); 
+menuEl.setAttribute('name', 'Atribut');
+console.log(menuEl.getAttribute('name'));
+
+console.log(menuEl.dataset.action);
+
+const inputRef = document.querySelector('input');
+inputRef.value = 'Display Input !!!';
+ 
+const mEl = document.querySelector(".menu");
+const chaild = mEl.children[2];
+console.log(chaild);
 
 
-class Child extends User {
-  constructor(name, age) {
-    super(name);
-    this.age = age;
-  }
-  add(a) {
-    this.age = a;
-  }
 
-}
 
-const baby = new Child("baby", 77777);
 
-console.log(baby);
 
-baby.a = 55555;
-console.log(baby);
