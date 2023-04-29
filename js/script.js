@@ -1,20 +1,25 @@
-// console.dir(window.document);
-// console.dir(document);
-
+const menuRef = document.querySelector(".menu");
 const menuEl = document.querySelector(".menu__item");
-// console.log(menuEl);
 
-menuEl.setAttribute('name', 'Atribut');
-console.log(menuEl.getAttribute('name'));
+const str = ['Java Script', 'HTML', 'CSS'];
 
-console.log(menuEl.dataset.action);
+const cr = document.createElement('h1');
+cr.textContent = `I like ${str[0]} !`; 
+cr.classList.add('title');
+console.log(cr);
 
-const inputRef = document.querySelector('input');
-inputRef.value = 'Display Input !!!';
+menuRef.before(cr); 
+
+const btnRef = document.createElement('button');
+btnRef.type = 'button';
+btnRef.textContent = 'Button';
+btnRef.style.backgroundColor = 'blue';
+btnRef.style.textAlign = 'center';
+btnRef.style.margin = '10px';
+menuRef.after(btnRef);
  
-const mEl = document.querySelector(".menu");
-const chaild = mEl.children[2];
-console.log(chaild);
+console.log(btnRef);
+
 
 
 
