@@ -1,28 +1,13 @@
-const menuRef = document.querySelector(".menu");
-const menuEl = document.querySelector(".menu__item");
+let str = '777';
+console.log(typeof str);
+let s = str.replace('777', '50');
+console.log(s);
 
-const str = ['Java Script', 'HTML', 'CSS'];
+const num = Number(s);
+console.log(typeof num);
 
-const cr = document.createElement('h1');
-cr.textContent = `I like ${str[0]} !`; 
-cr.classList.add('title');
-console.log(cr);
-
-menuRef.before(cr); 
-
-const btnRef = document.createElement('button');
-btnRef.type = 'button';
-btnRef.textContent = 'Button';
-btnRef.style.backgroundColor = 'blue';
-btnRef.style.textAlign = 'center';
-btnRef.style.margin = '10px';
-menuRef.after(btnRef);
- 
-console.log(btnRef);
-
-
-
-
-
-
-
+for (let i = 1; i <= s; i += 1) {
+  if (!(i % 5)) {
+console.log(i);
+  }
+}
