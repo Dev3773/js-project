@@ -1,4 +1,7 @@
-const str = "I like JS";
+const x = 7;
+let i = 2;
 
-const x = str.slice(2, 7);
-console.log(x);
+do {
+  console.log(`${i} < ${x}`);
+  i++;
+} while (i < x);
