@@ -1,4 +1,4 @@
-const arr = [7, 'hello', null, true, undefined, [1, 2, 3]];
+// const arr = [7, 'hello', null, true, undefined, [1, 2, 3]];
 
 // for (let i = 0; i < arr.length; i += 1) {
   //   if (Array.isArray(arr[i])) {
@@ -34,3 +34,58 @@ const arr = [7, 'hello', null, true, undefined, [1, 2, 3]];
 // console.log(arr2);
 // console.log(arr2.splice(0, 0,'Petya'));
 // console.log(arr2);
+
+// ---------- Function ------------ 
+
+// function bar() {
+//   console.log("bar");
+// }
+
+// function baz() {
+//   console.log("baz");
+// }
+
+// function foo() {
+//   console.log("foo");
+//   bar();
+//   baz();
+// }
+
+// foo();
+
+// function multiply(...a) {
+//   console.log(Array.isArray(a));
+//   console.log("rest - " + a);
+
+//   let total = 1;
+//   let arr = [];
+//   for (const argument of arguments) {
+//     arr.push(argument);
+//   }
+
+//   return arr;
+// }
+
+// console.log(multiply(1, 2, 3)); //  6
+// console.log(multiply(1, 2, 3, 4)); //  24
+// console.log(multiply(1, 2, 3, 4, 5)); //  120
+
+
+ function fun(ammount, balance) {
+  if (ammount > balance) {
+    console.log('Ammount more than balance');
+    return;
+  }
+
+  if (ammount === balance) {
+    console.log('Ammount equals balance');
+    return;
+  }
+
+  if (ammount < balance) {
+    console.log('Ammount less than balance');
+    return;
+  }
+}
+
+console.log(fun(100, 100));
