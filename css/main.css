@@ -25,6 +25,7 @@ h6,
 p,
 ul {
   margin: 0;
+  padding: 0;
 }
 
 img {
@@ -64,14 +65,4 @@ img {
   .container {
     max-width: 1200px;
   }
-}
-
-.menu__item {
-  font-size: 22px;
-  color: green;
-  margin-top: 10px;
-}
-
-.indent {
-  margin-top: 10px;
 }/*# sourceMappingURL=main.css.map */
