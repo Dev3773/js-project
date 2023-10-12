@@ -1,116 +1,87 @@
-// /**
-//  * 
-//  * @param {*} weidth 
-//  * @param {*} height 
-//  * @returns {Number}  
-//  */
-
-// function fn(weidth, height) {
-//   return weidth * height;
+// callback function
+// const fn = (name) => {
+// console.log(`Hello ${name}`);
 // }
 
-// const area = fn(5, 7);
-// console.log(area);
-
-// const obj = {
-//   proName: 'Audi',
-//   age: 5,
-//   date: new Date(),
-// };
-
-// console.log(obj.date);
-
-// const myArray = [5, 7, 9, 3, 2, 8];
-
-// const twoArray = [50, 30, 80, 70];
-
-// const threeArray = [...twoArray, ...myArray]
-// console.log(threeArray);
-
-// const first = { a: 1, b: 2, c: 20 };
-// const second = { c: 3, d: 4, };
-
-// const third = { ...second, ...first };
-// console.log(third);
-
-// const x = function (first, two, ...args) {
-//   console.log(first);
-//   console.log(two);
-//   console.log(args);
+// //  higher order function
+// const fnTwo = (name, callback) => {
+//   callback(name);
+//   console.log(`You are developer ${name}`);
 // }
 
-// x(1);
-// x(1, 2);
-// x(1, 2, 3, "four", "five");
+// fnTwo("Mango", fn);
 
-// const books = [
-//   {
-//     title: "The Last Kingdom",
-//     author: "Bernard Cornwell",
-//     rating: 8.38,
-//   },
-//   {
-//     title: "Cпокойных вод",
-//     author: "Роберт Шекли",
-//     rating: 8.51,
-//   },
-// ];
 
-// for (const { title, author, rating } of books) {
-
-//   console.log(title);
-//   console.log(author);
-//   console.log(rating);
+// const fnTwo = (name, callback) => {
+//   callback(name);
+//   console.log(`You are developer ${name}`);
 // }
 
-// const books = {
-//   title: "The Last Kingdom",
-//   author: "Bernard Cornwell",
-//   rating: 8.38,
-//   obj: {
-//     one: 1,
-//     two: 2,
-//     three: 3,
+// fnTwo("Mango", function fn(name) {
+// console.log(`Hello ${name}`);
+// });
+
+
+// function processCall(name, onAvailable, onNotavailable) {
+//   const bool = Math.random() > 0.5;
+  
+//   if (!bool) {
+//     onAvailable(name);
+//     return;
 //   }
+//   onNotavailable(name);
+//   return;
+// }
+
+// function onAvailable(name) {
+// console.log(`Ura ${name} the abonent is available !!!`);
+// }
+
+// function onNotavailable(name) {
+// console.log(`Sorry ${name} the abonent is not available (((`);
+// }
+
+// processCall("Vasya", onAvailable, onNotavailable);
+
+
+// const repeat = (n, callback) => {
+//   for (let i = 1; i < n; i += 1) {
+//     callback(i);
+//   }
+// }
+
+// function value(val) {
+// console.log(`I lern already ${val} years !!!`);
+// }
+
+// repeat(3, value);
+
+
+// const arr = [5, 7, 0, 9, 10, 8, 3];
+
+// arr.forEach((element, index, array) => {
+//   console.log(`element - ${element}`);
+//   // console.log(`index - ${index}`);
+//   // console.log(`array - ${array}`);
+// });
+
+
+// const classic = () => {
+    
+// };
+  
+// const add = (...rest) => {
+//   console.log(rest);
 // };
 
-// const { title, author, rating, obj: { one, two, tree } } = books;
+// console.log(add(3, 4, 5, 8));
 
-// console.log(two);
 
-// const arr = [10, 20, 30, 40];
-// const [, , , forty] = arr;
+// const arr = [5, 7, 0, 9, 1, 8, 3];
 
-// console.log(forty);
-
-// function fan({
-//   age: 5, old: 50,
-// }) {
-//   console.log(age);
-// }
-
-// fan();
-
-// function book({
-//   title: "The Last Kingdom",
-//   numberOfPages: 736,
-//   downloads: 10283,
-//   rating: 8.38,
-//   isPublic: true,
+// const x = arr.forEach((el, ind) => {
+//   console.log(el, ind);
 // });
 
-// book();
+// console.log(x);
 
-// function doStuffWithBook(book) {
-//   const { title, rating, isPublic } = book;
-//   console.log(title);
-//   console.log(rating);
-// }
-
-// doStuffWithBook({
-//   title: "The Last Kingdom",
-//   numberOfPages: 736,
-//   downloads: 10283,
-//   rating: 8.38,
-//   isPublic: true,
-// });
