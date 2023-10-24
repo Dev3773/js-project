@@ -1,100 +1,144 @@
-// function urlGen(domain) {
-//   return function (url) {
-//     return `https://${url}.${domain}`;
+// const animal = {
+// legs: 4,
+// };
+
+// const dog = Object.create(animal);
+// dog.name = "Mango";
+
+
+// console.log(animal);
+// console.log(dog);
+
+// for (const key in dog) {
+//   if (dog.hasOwnProperty(key)) {
+//    console.log(key) 
 //   }
-// } 
+// }
 
-// const comUrl = urlGen('com');
-
-// console.log(comUrl('google'));
-// console.log(comUrl('netflix'));
-// console.log(comUrl('github'));
+// const answer = Object.keys(dog);
+// console.log(answer);
 
 
-// const user = {
-//   authors: ['JS', 'CSS'],
-//   getAuthors() {
-// return this.authors;
-//   },
-//   addAuthors(val) {
-//     this.authors.push(val);
-//   },
-// };
 
-// console.log(user.getAuthors());
-// user.addAuthors('HTML');
-// console.log(user.getAuthors());
+// class User {
+//   #email;
 
-// function foo() {
-//   console.log(this);
-// };
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.#email = email;
+//   }
 
-// foo();
+//   get email() {
+//   return this.#email;
+//   }
+//   set email(mail) {
+//     if (mail === '') {
+//       console.log("Eror, empty line !!!");
+//       return;
+//     }
+//     this.#email = mail;
+//   }
+// }
+
+// const poly = new User({ name: "Poly", email: "poly@mail.com" });
+// console.log(poly);
 
 // const ob = {
-//   userName: 'Petya',
-//   metOb() {
-// console.log(this);
-//   },
+//   name: "Манго",
+//   email: "mango@mail.com",
 // };
 
-// ob.metOb();
+// const mango = new User(ob);
+// console.log(mango);
 
-// function fun() {
-//   console.log('This is the object:', this);
+// // mango.email = "stepaniuk.sergiy@gmail.com";
+// mango.email = "";
+
+// console.log(mango.email);
+
+// class User {
+//   #email;
+
+
+// class User {
+//   static takenEmails = [];
+//   static isEmailTaken(email) {
+//     return User.takenEmails.includes(email);
+//   }
+
+//   static Roles = {
+//     ADMIN: 'admin',
+//     EDITOR: 'editor',
+//   };
+//   #email;
+// constructor({ name, email }) {
+//   this.name = name;
+//   this.#email = email;
 // }
 
-// const ob = {
-//   user: 'Vasya',
-// };
-
-// ob.met = fun;
-
-// ob.met();
-
-// function greetGuests(griting) {
-//   console.log(`${griting}, ${this.userName} !!!`);
-// } 
-
-// const obM = {
-//   userName: "Mango",
-// };
-
-// const obP = {
-//   userName: "Poly",
-// };
-
-// greetGuests.call(obM, "Walcome");
-// greetGuests.apply(obP, ["Walcome"]);
-
-// const b = greetGuests.bind(obM);
-// b("Walcome");
-
-
-// const customer = {
-//   firstName: "Jacob",
-//   lastName: "Mercer",
-//   getFullName() {
-//     return `${this.firstName} ${this.lastName}`;
-//   },
-// };
-
-// function makeMessage(callback) {
-//   console.log(`Обрабатываем заявку от ${callback()}.`);
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(mail) {
+//     if (mail === '') {
+//       console.log("Eror, empty line !!!");
+//       return;
+//     }
+//     this.#email = mail;
+//   }
 // }
 
-// makeMessage(customer.getFullName.bind(customer));
+// const ob = new User({ name: "JavaScript", email: "stepaniuk.sergiy@gmail.com" });
+
+// console.log(ob);
 
 
+// class User {
+//   #email;
 
-// function greet(clientName) {
-//   return `${clientName}, добро пожаловать в «${this.service}».`;
+//   constructor(email) {
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
 // }
 
-// const steam = {
-//   service: "Steam",
-// };
+// class ContentEditor extends User {
+//   constructor({ email, posts }) {
+//     super(email);
+//     this.posts = posts;
+//   }
+// }
 
-// const result = greet.bind(steam);
-// console.log(result("Sergio"));
 
+// class Employee {
+//   #name;
+//   constructor(name) {
+//     this.#name = name;
+//   }
+
+//   get name() {
+//     return this.#name;
+//   }
+
+//   set name(n) {
+//     this.#name = n;
+//   }
+// }
+
+// class Doctor extends Employee {
+//   constructor(name, profession) {
+//     super(name);
+//     this.profession = profession;
+//   }
+// }
+
+// const medical = new Doctor("Isya", "Stomatolog");
+
+// console.log(medical);
