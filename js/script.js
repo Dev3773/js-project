@@ -1,144 +1,56 @@
-// const animal = {
-// legs: 4,
-// };
+// const artRef = document.querySelector('.art');
+// console.log(artRef);
 
-// const dog = Object.create(animal);
-// dog.name = "Mango";
+// const subTitleRef = document.createElement("h2");
+// subTitleRef.classList.add("article__subtitle");
+// subTitleRef.setAttribute("id", "777");
+// subTitleRef.textContent = "This is subtitle h2";
+// console.log(subTitleRef);
 
+// const textRef = document.createElement("p");
+// textRef.classList.add("article__text");
+// textRef.id = "myId"
+// textRef.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error.";
+// console.log(textRef);
 
-// console.log(animal);
-// console.log(dog);
-
-// for (const key in dog) {
-//   if (dog.hasOwnProperty(key)) {
-//    console.log(key) 
-//   }
-// }
-
-// const answer = Object.keys(dog);
-// console.log(answer);
+// artRef.prepend(subTitleRef, textRef);
+// console.log(artRef);
 
 
 
-// class User {
-//   #email;
+// const article = document.querySelector(".article");
+// console.log(article.innerHTML);
 
-//   constructor({ name, email }) {
-//     this.name = name;
-//     this.#email = email;
-//   }
+// const title = document.querySelector(".article .title");
+// console.log(title.innerHTML);
+// title.innerHTML = "qwerty";
+// console.log(title.innerHTML);
 
-//   get email() {
-//   return this.#email;
-//   }
-//   set email(mail) {
-//     if (mail === '') {
-//       console.log("Eror, empty line !!!");
-//       return;
-//     }
-//     this.#email = mail;
-//   }
-// }
+// const text = document.querySelector(".article .text");
+// console.log(text.innerHTML);
 
-// const poly = new User({ name: "Poly", email: "poly@mail.com" });
-// console.log(poly);
-
-// const ob = {
-//   name: "Манго",
-//   email: "mango@mail.com",
-// };
-
-// const mango = new User(ob);
-// console.log(mango);
-
-// // mango.email = "stepaniuk.sergiy@gmail.com";
-// mango.email = "";
-
-// console.log(mango.email);
-
-// class User {
-//   #email;
+// const link = document.querySelector(".article .link");
+// console.log(link.innerHTML);
 
 
-// class User {
-//   static takenEmails = [];
-//   static isEmailTaken(email) {
-//     return User.takenEmails.includes(email);
-//   }
+const technologies = ["HTML", "CSS", "SCSS", "JavaScript", "GIT"];
 
-//   static Roles = {
-//     ADMIN: 'admin',
-//     EDITOR: 'editor',
-//   };
-//   #email;
-// constructor({ name, email }) {
-//   this.name = name;
-//   this.#email = email;
-// }
+const listRef = document.querySelector(".list");
 
-//   get email() {
-//     return this.#email;
-//   }
-//   set email(mail) {
-//     if (mail === '') {
-//       console.log("Eror, empty line !!!");
-//       return;
-//     }
-//     this.#email = mail;
-//   }
-// }
+const markup = technologies.map((technology) =>
+  `<li class="item">${technology}</li>`).join('');
 
-// const ob = new User({ name: "JavaScript", email: "stepaniuk.sergiy@gmail.com" });
-
-// console.log(ob);
+// listRef.innerHTML = markup; 
+listRef.insertAdjacentHTML("afterbegin", markup); 
 
 
-// class User {
-//   #email;
-
-//   constructor(email) {
-//     this.#email = email;
-//   }
-
-//   get email() {
-//     return this.#email;
-//   }
-
-//   set email(newEmail) {
-//     this.#email = newEmail;
-//   }
-// }
-
-// class ContentEditor extends User {
-//   constructor({ email, posts }) {
-//     super(email);
-//     this.posts = posts;
-//   }
-// }
+// const subRef = document.querySelector('.subtitle');
+// subRef.innerHTML = ' ';
+// technologies.map((item) => console.log(item));
 
 
-// class Employee {
-//   #name;
-//   constructor(name) {
-//     this.#name = name;
-//   }
+const sectionRef = document.querySelector('.section');
+const text = `<h1 class="title">My Title h1</h1>`;
+sectionRef.insertAdjacentHTML("afterbegin", text);
 
-//   get name() {
-//     return this.#name;
-//   }
 
-//   set name(n) {
-//     this.#name = n;
-//   }
-// }
-
-// class Doctor extends Employee {
-//   constructor(name, profession) {
-//     super(name);
-//     this.profession = profession;
-//   }
-// }
-
-// const medical = new Doctor("Isya", "Stomatolog");
-
-// console.log(medical);
