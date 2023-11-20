@@ -1,56 +1,80 @@
-// const artRef = document.querySelector('.art');
-// console.log(artRef);
+// const mainButoon = document.querySelector(".js-main-button");
+// const addButoon = document.querySelector(".js-add-button");
+// const removeButoon = document.querySelector(".js-remove-button");
 
-// const subTitleRef = document.createElement("h2");
-// subTitleRef.classList.add("article__subtitle");
-// subTitleRef.setAttribute("id", "777");
-// subTitleRef.textContent = "This is subtitle h2";
-// console.log(subTitleRef);
+// const onClick = (event) => {
+//   console.log("click on add button");
+//   console.log(event);
 
-// const textRef = document.createElement("p");
-// textRef.classList.add("article__text");
-// textRef.id = "myId"
-// textRef.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error.";
-// console.log(textRef);
+//   mainButoon.addEventListener("click", onTargetButton);
+// };
 
-// artRef.prepend(subTitleRef, textRef);
-// console.log(artRef);
+// addButoon.addEventListener("click", onClick);
 
 
+// removeButoon.addEventListener("click", () => {
+//   console.log("remove event"); 
 
-// const article = document.querySelector(".article");
-// console.log(article.innerHTML);
+//   mainButoon.removeEventListener("click", onTargetButton);
+// });
 
-// const title = document.querySelector(".article .title");
-// console.log(title.innerHTML);
-// title.innerHTML = "qwerty";
-// console.log(title.innerHTML);
-
-// const text = document.querySelector(".article .text");
-// console.log(text.innerHTML);
-
-// const link = document.querySelector(".article .link");
-// console.log(link.innerHTML);
+// function onTargetButton() {
+//   console.log("Click on main button");
+// };
 
 
-const technologies = ["HTML", "CSS", "SCSS", "JavaScript", "GIT"];
-
-const listRef = document.querySelector(".list");
-
-const markup = technologies.map((technology) =>
-  `<li class="item">${technology}</li>`).join('');
-
-// listRef.innerHTML = markup; 
-listRef.insertAdjacentHTML("afterbegin", markup); 
 
 
-// const subRef = document.querySelector('.subtitle');
-// subRef.innerHTML = ' ';
-// technologies.map((item) => console.log(item));
+// const inputRef = document.querySelector('.text-input');
+// const outputRef = document.querySelector('.output');
+
+// inputRef.addEventListener('input', (event => {
+//   outputRef.textContent = event.currentTarget.value
+// }));
+
+// const formEl = document.querySelector(".form");
+// formEl.addEventListener('submit', onFormSubmit);
+
+// function onFormSubmit(event) {
+//   event.preventDefoult();
+//   console.log(event.currentTarget);
+//   console.log('This is a submit of forms');
+// }
+ 
 
 
-const sectionRef = document.querySelector('.section');
-const text = `<h1 class="title">My Title h1</h1>`;
-sectionRef.insertAdjacentHTML("afterbegin", text);
+window.addEventListener('keydown', onKeypress);
 
+function onKeypress(event) {
+  console.log('event key: ', event.key);
+  console.log('event key: ', event.code);  
+}
+
+
+const submitRef = document.querySelector(".js-submit");
+
+const handClick = (event) => {
+  console.log(event);
+}
+
+submitRef.addEventListener('click', handClick);
+
+
+window.addEventListener("keydown", event => {
+  console.log(event.key);
+})
+
+
+
+const formRef = document.querySelector(".form");
+formRef.addEventListener("submit", (event) => preventDefault());
+
+const handValue = (event) => {
+  spanRef.textContent = event.currentTarget.value;
+};
+
+const imputRef = document.querySelector(".text-input");
+const spanRef = document.querySelector(".span");
+
+imputRef.addEventListener("input", handValue);
 
