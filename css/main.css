@@ -106,4 +106,9 @@ img {
   outline: 2px solid tomato;
   margin: 10px;
   padding: 10px;
+}
+
+.list--item {
+  margin-top: 20px;
+  margin-left: 10px;
 }/*# sourceMappingURL=main.css.map */
