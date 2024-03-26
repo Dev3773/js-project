@@ -147,14 +147,40 @@
 // const title = document.querySelector(".article .title");
 // console.log(title.innerHTML = '');
 
-const arr = ["HTML", "CSS", "JS", "REACT"];
+// const arr = ["HTML", "CSS", "JS", "REACT"];
 
-const list = document.querySelector(".list");
+// const list = document.querySelector(".list");
 
-const markup = arr.map((tech) => 
-  `<li class"list--item">I study ${tech} !!!</li>`).join(" ");
+// const markup = arr.map((tech) => 
+//   `<li class"list--item">I study ${tech} !!!</li>`).join(" ");
 
-// list.innerHTML = markup;
+// // list.innerHTML = markup;
 
-list.insertAdjacentHTML("afterbegin", markup);
+// list.insertAdjacentHTML("afterbegin", markup);
 
+
+// const btn = document.querySelector(".js-main-button[data-action='save']");
+
+// const fn = event => {
+//   console.log("event:", event);
+//   console.log("event type: ", event.type);
+//   console.log("currentTarget: ", event.currentTarget);
+// };
+
+// btn.addEventListener("click", fn);
+
+
+// document.addEventListener("keydown", event => {
+//   console.log("key: ", event.key);
+//   console.log("code: ", event.code);
+// });
+
+
+const textInput = document.querySelector('.text-input');
+const output = document.querySelector('.output');
+
+const outText = (event) => {
+  output.textContent = event.currentTarget.value;
+};
+
+textInput.addEventListener("input", outText);
